@@ -12,10 +12,10 @@ Identity.destroy_all
 CSV.foreach("db/amber.csv", headers: true) do |line|
   Identity.create! line.to_hash
 end
+CSV.foreach("db/fuerocomun.csv", headers: true) do |line|
+  Identity.create! line.to_hash
+end
 
 User.create(email: 'admin@gmail.com', password: 'password', password_confirmation: 'password', superadmin_role: true)
 
 
-# CSV.foreach("db/fuerocomun.csv", headers: true) do |line|
-#   Identity.create! line.to_hash
-# end
