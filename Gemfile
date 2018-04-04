@@ -54,5 +54,12 @@ end
 gem 'rails-erd', require: false, group: :development
 gem 'erd'
 gem 'jquery-rails'
+gem 'devise'
+gem 'toastr-rails'
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
+gem 'cancancan'
+gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'pry'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
