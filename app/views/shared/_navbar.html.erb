@@ -13,7 +13,9 @@
 
     <ul class="nav navbar-top-links navbar-right">
 
-      <li ><a class="logout-white" href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a> </li>
+      <li >
+         <%= link_to('Salir', destroy_user_session_path, :method => :delete, :class => 'sign-in-first' ) %>  
+      </li>
 
     </ul>
     <!-- /.navbar-top-links -->

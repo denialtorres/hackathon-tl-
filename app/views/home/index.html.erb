@@ -5,10 +5,8 @@
       <% if current_user.nil? %>
         <%= link_to new_user_session_path, class: 'sign-in-first' do %>Acceso autorizado<% end %>
       <% else %>
+         <%= link_to('Salir', destroy_user_session_path, :method => :delete, :class => 'sign-in-first' ) %>  
       <% end %>
-
-
-
 
       <div class="container">
       </div>

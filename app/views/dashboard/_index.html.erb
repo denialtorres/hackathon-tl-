@@ -15,7 +15,7 @@
                             <i class="fa fa-address-card fa-5x"></i>
                         </div>
                         <div class="col-xs-9 text-right">
-                            <div class="huge">33,995</div>
+                            <div class="huge"><%= Identity.all.count %></div>
                             <div>Personas registradas</div>
                         </div>
                     </div>
@@ -124,80 +124,30 @@
                     </div>
                 </div>
                 <!-- /.panel-heading -->
+                
                 <div class="panel-body">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-hover table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Fecha</th>
-                                            <th>Nombre</th>
-                                            <th>Estado</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>3326</td>
-                                            <td>10/21/2013</td>
-                                            <td>Juan Pérez</td>
-                                            <td>Nuevo León</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3325</td>
-                                            <td>10/21/2013</td>
-                                            <td>Martha Álvarez</td>
-                                            <td>Sinaloa</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3324</td>
-                                            <td>10/21/2013</td>
-                                            <td>Rubén Alanís</td>
-                                            <td>Jalisco</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3323</td>
-                                            <td>10/21/2013</td>
-                                            <td>Marcos Sanchez</td>
-                                            <td>Baja California Sur</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3322</td>
-                                            <td>10/21/2013</td>
-                                            <td>David Benitez</td>
-                                            <td>Estado de México</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3321</td>
-                                            <td>10/21/2013</td>
-                                            <td>Raúl Hernández/td>
-                                            <td>Chihuahua</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3320</td>
-                                            <td>10/21/2013</td>
-                                            <td>Ernesto Roca</td>
-                                            <td>Nayarit</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3319</td>
-                                            <td>10/21/2013</td>
-                                            <td>Sebastián Valadéz</td>
-                                            <td>Michoacán</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.table-responsive -->
-                        </div>
-                        <!-- /.col-lg-4 (nested) -->
-                        <div class="col-lg-8">
-                            <div id="morris-bar-chart"></div>
-                        </div>
-                        <!-- /.col-lg-8 (nested) -->
-                    </div>
-                    <!-- /.row -->
+                    <%= will_paginate @resources %>
+                    <table class="table" style="width:600px">
+                      <thead>
+                      <tr>
+                        <th style="text-align:right;">Nombre</th>
+                        <th style="text-align:right;">Genero</th>
+                        <th style="text-align:right;">Nacionalidad</th>
+                        <th style="text-align:right;">Edad</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <% @resources.each do |resource| %>
+                          <tr>
+                            <td style="text-align:right;"><%= resource.first_name %></td>
+                            <td style="text-align:right;"><%= resource.gender %></td>
+                            <td style="text-align:right;"><%= resource.birth_country %></td>
+                            <td style="tex-align:right;"><%= rand(7..98) %></td>
+                          </tr>
+                      <% end %>
+                      </tbody>
+                    </table>
+                     <%= will_paginate @resources %>
                 </div>
                 <!-- /.panel-body -->
             </div>
