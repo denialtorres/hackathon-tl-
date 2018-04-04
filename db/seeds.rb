@@ -19,3 +19,4 @@ end
 User.create(email: 'admin@gmail.com', password: 'password', password_confirmation: 'password', superadmin_role: true)
 
 
+User.create(email: 'user@gmail.com', password: 'password', password_confirmation: 'password', editor_role: true)

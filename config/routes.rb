@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'editor/index'
+
+  get 'dashboard/index'
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'home/index'
 
