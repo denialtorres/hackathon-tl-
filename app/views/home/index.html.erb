@@ -5,12 +5,9 @@
       <% if current_user.nil? %>
         <%= link_to new_user_session_path, class: 'sign-in-first' do %>Acceso autorizado<% end %>
       <% else %>
+         <%= link_to('Salir', destroy_user_session_path, :method => :delete, :class => 'sign-in-first' ) %>  
       <% end %>
 
-
-      <% if can? :manage, User %>
-        <p>Visible only for superadmins and supervisors! </p>
-      <% end %>
 
       <div class="container">
       </div>
