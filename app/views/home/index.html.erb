@@ -1,26 +1,144 @@
-<header role="banner">
-    <% unless user_signed_in? %>
-              <li><%= link_to "Sign in", new_user_session_path %></li>
-            <% end %>
-            <% if user_signed_in? %>
-              <p class="navbar-text">
-                Signed in as <%= "#{current_user.email}" %>
-                <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
-              </p>
-            <% end %>
-  </header>
+    <!-- Masthead -->
+    <header class="masthead text-white text-center">
+      <% if current_user.nil? %>
+        <%= link_to new_user_session_path, class: 'sign-in-first' do %>Acceso autorizado<% end %>
+      <% else %>
+      <% end %>
 
 
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+      <% if can? :manage, User %>
+        <p>Visible only for superadmins and supervisors! </p>
+      <% end %>
+
+      <div class="container">
+      </div>
+    </header>
+
+    <!-- Icons Grid -->
+    <section class="features-icons bg-light text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-book-open m-auto text-info"></i>
+              </div>
+              <h3>¿De qué se trata?</h3>
+              <p class="lead mb-0">Estandarizamos los datos de personas no-localizadas y proporcionamos un lugar centralizado donde autoridades y sociedad civil puedan colaborar.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-people m-auto text-info"></i>
+              </div>
+              <h3>¿Quién participa?</h3>
+              <p class="lead mb-0">Personas tanto de gobierno, como de sociedad civil que están involucradas en la lucha por encontrar a nuestros desaparecidos.</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-directions m-auto text-info"></i>
+              </div>
+              <h3>Datos Abiertos</h3>
+              <p class="lead mb-0">Generamos datos para la toma de decisiones inteligente sobre desaparición en México y combate a la violencia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Showcases -->
+    <section class="showcase">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('<%= asset_path('bg-showcase-1.jpg') %>');"></div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+            <h2>Estandarización</h2>
+            <p class="lead mb-0">Desarrollamos mediante una investigación un estándar de datos para personas no-localizadas suficientemente robusto para atender las necesidades de aquellos que trabajan con personas no localizadas. Nuestro estándar contiene 168 campos a comparación de los 17 que sugiere el actual protocolo de homologación de datos en la ley para desaparición.</p>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6 text-white showcase-img" style="background-image: url('<%= asset_path('bg-showcase-2.jpg') %>');"></div>
+          <div class="col-lg-6 my-auto showcase-text">
+            <h2>Colaboración</h2>
+            <p class="lead mb-0">Una plataforma centralizada permite a los diferentes equipos que están en contacto con personas no localizadas una colaboración en tiempo real sobre los casos que atienden. Permitirá que entidades públicas, tales como fiscalías, peritos, defensores públicos, hospitales y organizaciones que rutinariamente hacen manejo de casos puedan colaborar en un solo lugar.</p>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('<%= asset_path('bg-showcase-3.jpg') %>');"></div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+            <h2>Consulta</h2>
+            <p class="lead mb-0">Permite que tanto los involucrados como personas de la sociedad civil, tales como académicos, investigadores o público en general puedan hacer uso de los conjuntos de datos generados y propongan nuevas formas de atajar las problemáticas de desaparición y violencia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="call-to-action text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h2 class="mb-4">¿Te gustaría saber más? Consulta los detalles del estándar de datos aquí</h2>
+          </div>
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+            <ul class="list-inline mb-2">
+              <li class="list-inline-item">
+                <a href="#">Sobre este proyecto</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Sobre el equipo</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Datos abiertos</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="#">Solicita acceso</a>
+              </li>
+            </ul>
+            <p class="text-muted small mb-4 mb-lg-0">&copy; Buscándonos 2018.</p>
+          </div>
+          <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item mr-3">
+                <a href="#">
+                  <i class="fa fa-facebook fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item mr-3">
+                <a href="#">
+                  <i class="fa fa-twitter fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-instagram fa-2x fa-fw"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
 
 
-<% if current_user.nil? %>
-	<%= link_to new_user_session_path, class: 'login-button' do %>Sign in<% end %>
-<% else %>
-<% end %>
+  </body>
 
-
-<% if can? :manage, User %>
-	<p>Visible only for superadmins and supervisors! </p>
-<% end %>
+</html>
