@@ -1,0 +1,2 @@
+class Genetic < ApplicationRecord
+end

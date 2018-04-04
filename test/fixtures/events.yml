@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event_date: 2018-04-04
+  event_time: 2018-04-04 01:15:08
+  event_street: MyString
+  event_street_number: MyString
+  event_colony: MyString
+  event_municipality: MyString
+  event_city: MyString
+  event_postal: 1
+  event_state: MyString
+  event_country: MyString
+  com_device: false
+  device_sn: MyString
+  device_IMEI: MyString
+  vehicule: false
+  vehicule_plate: MyString
+  vehicule_color: MyString
+  vehicule_year: 1
+  vehicule_found: false
+  possible_cause: MyString
+  context: MyString
+  act: MyString
+  abductor: MyString
+  violence: false
+  abduct_atribution: false
+  physical_consecuences: false
+  place_type: MyString
+
+two:
+  event_date: 2018-04-04
+  event_time: 2018-04-04 01:15:08
+  event_street: MyString
+  event_street_number: MyString
+  event_colony: MyString
+  event_municipality: MyString
+  event_city: MyString
+  event_postal: 1
+  event_state: MyString
+  event_country: MyString
+  com_device: false
+  device_sn: MyString
+  device_IMEI: MyString
+  vehicule: false
+  vehicule_plate: MyString
+  vehicule_color: MyString
+  vehicule_year: 1
+  vehicule_found: false
+  possible_cause: MyString
+  context: MyString
+  act: MyString
+  abductor: MyString
+  violence: false
+  abduct_atribution: false
+  physical_consecuences: false
+  place_type: MyString

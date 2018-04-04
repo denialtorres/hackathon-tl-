@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  report_date: 2018-04-04
+  report_institution: false
+  report_media_url: MyString
+  report_media_reach: MyString
+  report_institution_name: MyString
+  report_institution_street: MyString
+  report_institution_number: MyString
+  report_institution_colony: MyString
+  report_institution_municipality: MyString
+  report_institution_state: MyString
+  report_institution_country: MyString
+  report_institution_answer: MyString
+
+two:
+  report_date: 2018-04-04
+  report_institution: false
+  report_media_url: MyString
+  report_media_reach: MyString
+  report_institution_name: MyString
+  report_institution_street: MyString
+  report_institution_number: MyString
+  report_institution_colony: MyString
+  report_institution_municipality: MyString
+  report_institution_state: MyString
+  report_institution_country: MyString
+  report_institution_answer: MyString

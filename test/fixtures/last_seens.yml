@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ls_date: 2018-04-04
+  ls_time: 2018-04-04 01:06:32
+  ls_number: MyString
+  ls_colony: MyString
+  ls_municipality: MyString
+  ls_city: MyString
+  ls_postal: 1
+  ls_state: MyString
+  ls_country: MyString
+  clothes: false
+  clothes_top: MyString
+  clothes_top_color: MyString
+  clothes_bottom: MyString
+  clothes_bottom_color: MyString
+
+two:
+  ls_date: 2018-04-04
+  ls_time: 2018-04-04 01:06:32
+  ls_number: MyString
+  ls_colony: MyString
+  ls_municipality: MyString
+  ls_city: MyString
+  ls_postal: 1
+  ls_state: MyString
+  ls_country: MyString
+  clothes: false
+  clothes_top: MyString
+  clothes_top_color: MyString
+  clothes_bottom: MyString
+  clothes_bottom_color: MyString

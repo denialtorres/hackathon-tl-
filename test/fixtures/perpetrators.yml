@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  attribution: false
+  legal_attribution: false
+  legal_figure: false
+  legal_order: false
+  criminal_attribution: MyString
+  criminal_figure: MyString
+
+two:
+  attribution: false
+  legal_attribution: false
+  legal_figure: false
+  legal_order: false
+  criminal_attribution: MyString
+  criminal_figure: MyString

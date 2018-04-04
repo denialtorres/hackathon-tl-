@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  DNA_subject: MyString
+  DNA_s_b: MyString
+  DNA_s_b_date: 2018-04-04
+  DNA_s_b_ref: MyString
+  DNA_s_b_code: false
+  DNA_s_b_inst: false
+  DNA_s_s: false
+  DNA_s_s_date: false
+  DNA_s_s_ref: false
+  DNA_s_s_code: false
+  DNA_family: false
+  DNA_f_b: false
+  DNA_f_number_b: false
+
+two:
+  DNA_subject: MyString
+  DNA_s_b: MyString
+  DNA_s_b_date: 2018-04-04
+  DNA_s_b_ref: MyString
+  DNA_s_b_code: false
+  DNA_s_b_inst: false
+  DNA_s_s: false
+  DNA_s_s_date: false
+  DNA_s_s_ref: false
+  DNA_s_s_code: false
+  DNA_family: false
+  DNA_f_b: false
+  DNA_f_number_b: false
