@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180404062544) do
+ActiveRecord::Schema.define(version: 20180404090505) do
 
   create_table "biographies", force: :cascade do |t|
     t.string "biography_street"
@@ -127,7 +127,7 @@ ActiveRecord::Schema.define(version: 20180404062544) do
     t.boolean "glasses"
     t.boolean "contact_lens"
     t.boolean "diopters"
-    t.float "weight"
+    t.string "weight"
     t.float "height"
     t.string "skin_type"
     t.string "eye_color"
@@ -149,6 +149,8 @@ ActiveRecord::Schema.define(version: 20180404062544) do
     t.boolean "sight_disabilities"
     t.boolean "ear_disabilities"
     t.boolean "ethnicity"
+    t.string "eye_type"
+    t.string "unixtime"
   end
 
   create_table "last_seens", force: :cascade do |t|
