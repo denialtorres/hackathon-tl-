@@ -35,12 +35,14 @@
                     <!-- /input-group -->
                 </li>
                 <li>
-                    <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                  <%= link_to dashboard_index_path do %>
+                    <i class="fa fa-edit fa-fw"></i> Dashboard
+                  <% end %>
                 </li>
                 <li>
-
-                  <a href="#"><i class="fa fa-search fa-fw"></i>Búsqueda</a>
-                    <!-- /.nav-second-level -->
+                  <%= link_to identities_path do %>
+                    <i class="fa fa-search fa-fw"></i> Búsqueda y registros
+                  <% end %>
                 </li>
                 <li>
                   <%= link_to new_identity_path do %>
