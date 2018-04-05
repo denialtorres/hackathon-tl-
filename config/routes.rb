@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :identities
-  
+  resources :editor, only: [:index] do
+    collection do
+      match 'search' => 'editor#search', via: [:get, :post], as: :search
+    end
+  end
   get 'editor/index'
   get 'dashboard/index'
 
