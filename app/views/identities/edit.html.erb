@@ -1,0 +1,12 @@
+editale
+
+<%= form_for @identity, url: identity_path(@identity) do |f| %>
+
+<div class="field">
+  <%= f.file_field :avatar %>
+</div>
+<p>
+ <%= f.submit "Actualizar"%>
+</p>
+
+<% end %>

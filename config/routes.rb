@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  resources :identities
+  
   get 'editor/index'
-
   get 'dashboard/index'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'

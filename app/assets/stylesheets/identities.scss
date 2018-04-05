@@ -1,0 +1,124 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400,300);
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+html *,
+html *:before,
+html *:after {
+  box-sizing: inherit;
+}
+body {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  padding: 1.25em;
+}
+.missing {
+  padding: 1.25em;
+  min-width: 20em;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 40em;
+}
+.missing:before,
+.missing:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.missing:before,
+.missing:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.missing figure {
+  float: left;
+  text-align: center;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  max-height: 25.375em;
+  max-width: 25.375em;
+  width: 100%;
+  overflow: hidden;
+}
+.missing figure figcaption {
+  padding: 0.625em;
+}
+.missing figure img {
+  width: 100%;
+  max-width: 100%;
+}
+@media (min-width: 30em) {
+  .missing figure {
+    float: left;
+    text-align: center;
+    width: 33.333333333333336%;
+    margin: 0;
+    max-height: 13.75em;
+  }
+}
+@media (min-width: 45em) {
+  .missing figure {
+    float: left;
+    text-align: center;
+    width: 33.333333333333336%;
+    max-width: 12.5em;
+  }
+}
+.missing ul {
+  padding: 0;
+}
+.missing ul li {
+  list-style-type: none;
+}
+@media (min-width: 30em) {
+  .missing ul {
+    margin: 0;
+  }
+}
+.missing ul.missing-key {
+  float: left;
+  text-align: right;
+  width: 50%;
+}
+@media (min-width: 30em) {
+  .missing ul.missing-key {
+    float: left;
+    text-align: right;
+    width: 33.333333333333336%;
+    padding: 0;
+  }
+}
+@media (min-width: 45em) {
+  .missing ul.missing-key {
+    float: left;
+    text-align: right;
+    width: 25%;
+  }
+}
+.missing ul.missing-value {
+  float: left;
+  text-align: left;
+  width: 50%;
+  padding-left: 1.25em;
+}
+@media (min-width: 30em) {
+  .missing ul.missing-value {
+    float: left;
+    text-align: left;
+    width: 33.333333333333336%;
+  }
+}
+@media (min-width: 45em) {
+  .missing ul.missing-value {
+    float: left;
+    text-align: left;
+    width: 41.66666666666667%;
+  }
+}

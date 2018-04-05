@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180404090505) do
+ActiveRecord::Schema.define(version: 20180405065825) do
 
   create_table "biographies", force: :cascade do |t|
     t.string "biography_street"
@@ -151,6 +151,10 @@ ActiveRecord::Schema.define(version: 20180404090505) do
     t.boolean "ethnicity"
     t.string "eye_type"
     t.string "unixtime"
+    t.string "avatar_file_name"
+    t.string "avatar_content_type"
+    t.integer "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "last_seens", force: :cascade do |t|
