@@ -47,15 +47,5 @@ RailsAdmin.config do |config|
   
   config.authorize_with :cancan
   
-  config.model 'Identity' do
-    list do
-      field :id
-      field :first_name
-      field :first_second_name
-      field :nationatily
-      field :gender
-      exclude_fields :created_at
-      exclude_fields :updated_at
-    end
-  end
+
 end
