@@ -1,0 +1,94 @@
+<div class="container-fluid">
+<%= form_for(@identity) do |f| %>
+  <% if @identity.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@identity.errors.count, "error") %>
+        prohibited this story from being saved:
+      </h2>
+      <ul>
+        <% @identity.errors.full_messages.each do |message| %>
+          <li>
+            <%= message %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container">
+    <div class="row">
+      <div class="col-50">
+        <div class="form-group">
+          <p>
+            <label for="PrimerNombre">Primer Nombre</label>
+          </p>
+          <%= f.text_field :first_name, class: 'form-control' %>
+        </div>
+      </div>
+      <div class="col-50">
+        <div class="form-group">
+          <p>
+            <label for="SegundoNombre">Segundo Nombre</label>
+          </p>
+          <%= f.text_field :second_name, class: 'form-control' %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="form-group col-50">
+        <p>
+          <label for="apellido">Primer apellido</label>
+        </p>
+        <%= f.text_field :first_last_name, class: 'form-control' %>
+      </div>
+      <div class="form-group col-50">
+        <p>
+          <label for="segundoapellido">Segundo apellido</label>
+        </p>
+        <%= f.text_field :first_second_name, class: 'form-control' %>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="form-group col-50">
+        <p>
+          <label for="pais">País de nacimiento</label>
+        </p>
+        <%= f.text_field :birth_country, class: 'form-control' %>
+      </div>
+      <div class="form-group col-50">
+        <p>
+          <label for="lentes">¿Usa lentes?</label>
+        </p>
+        <%= f.check_box :glasses %>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="form-group col-50">
+        <p>
+          <label for="lentes">Color de tez</label>
+        </p>
+        <%= f.text_field :skin_type, class: 'form-control' %>
+      </div>
+      <div class="form-group col-50">
+        <p>
+          <label for="lentes">Color de ojos</label>
+        </p>
+        <%= f.text_field :eye_color, class: 'form-control' %>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="actions form-fields">
+    <%= f.submit 'Submit', class: 'btn btn-primary' %>
+  </div>
+<% end %>
+</div>

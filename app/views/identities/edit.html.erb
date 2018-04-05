@@ -1,12 +1,14 @@
-editale
 
-<%= form_for @identity, url: identity_path(@identity) do |f| %>
 
-<div class="field">
-  <%= f.file_field :avatar %>
+<div class="section row tips">
+  <div class="col-md-12">
+    <div class="box">
+      <h1 class="title">Edita la información de esta persona</h1>
+      <%= link_to identities_path do %>
+        <i class="fa fa-angle-left back"></i>
+        <p class="inline back" style="display: inline;">Regresar</p>
+      <% end %>
+      <%= render 'form', identity: @identity %>
+    </div>
+  </div>
 </div>
-<p>
- <%= f.submit "Actualizar"%>
-</p>
-
-<% end %>
