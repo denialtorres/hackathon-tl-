@@ -18,7 +18,18 @@
   	 <% end %>
     </script>
   <% end %>
+  <% if current_user %>
+    <div id="wrapper">
+      <%= render 'shared/navbar' %>
+      <div id="page-wrapper">
+        <%= yield %>
+      </div>
 
+    </div>
+
+  <% else %>
     <%= yield %>
+  <% end %>
+
   </body>
 </html>

@@ -1,0 +1,10 @@
+<div class="section row">
+  <div class="box">
+    <h1 class="title">New Identity</h1>
+    <%= link_to identities_path do %>
+      <i class="fa fa-angle-left back"></i>
+      <p class="inline back" style="display: inline;">Back</p>
+    <% end %>
+    <%= render 'form', identity: @identity %>
+  </div>
+</div>
