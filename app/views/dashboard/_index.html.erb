@@ -134,6 +134,7 @@
                         <th style="text-align:right;">Genero</th>
                         <th style="text-align:right;">Nacionalidad</th>
                         <th style="text-align:right;">Edad</th>
+                        <th colspan="2"></th>
                       </tr>
                       </thead>
                       <tbody>
@@ -143,6 +144,7 @@
                             <td style="text-align:right;"><%= resource.gender %></td>
                             <td style="text-align:right;"><%= resource.birth_country %></td>
                             <td style="tex-align:right;"><%= rand(7..98) %></td>
+                            <td><%= link_to 'Ver', identity_path(resource) %></td>
                           </tr>
                       <% end %>
                       </tbody>

@@ -1,0 +1,40 @@
+<h1>Persona Desaparecida</h1>
+
+<body>
+  <section class="missing">
+    <figure>
+      <figcaption><%= @identity.first_name %></figcaption>
+      <% if @identity.avatar? %>
+        <%= image_tag @identity.avatar.url, :size => "260x130" %>
+      <% else %>
+        <img src="https://i.imgur.com/udaFXMH.png" alt="Missing Person" />
+      <% end %>
+    </figure>
+    <ul class="missing-key">
+      <li>Missing Since:</li>
+      <li>Missing From:</li>
+      <li>Date of Birth:</li>
+      <li>Age:</li>
+      <li>Sex:</li>
+      <li>Race:</li>
+      <li>Hair Color:</li>
+      <li>Eye Color:</li>
+      <li>Height:</li>
+      <li>Weight:</li>
+    </ul>
+    <ul class="missing-value">
+      <li>March 30, 2015</li>
+      <li>Nocona, TX</li>
+      <li>March 15, 1997</li>
+      <li>18</li>
+      <li>Male</li>
+      <li>White</li>
+      <li>Blonde</li>
+      <li>Blue</li>
+      <li>6'2"</li>
+      <li>145</li>
+    </ul>
+  </section>
+</body>
+
+<%= link_to 'Editar', edit_identity_path(@identity) %>
