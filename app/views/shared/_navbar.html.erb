@@ -24,14 +24,26 @@
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
                 <li class="sidebar-search">
-                    <div class="input-group custom-search-form">
-                        <input type="text" class="form-control" placeholder="Búsqueda...">
-                        <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </span>
-                    </div>
+                    
+                        <!--<input type="text" class="form-control" placeholder="Búsqueda...">-->
+                        <!--<span class="input-group-btn">-->
+                        <!--<button class="btn btn-default" type="button">-->
+                        <!--    <i class="fa fa-search"></i>-->
+                        <!--</button>-->
+                        <!--</span>-->
+                        <%= search_form_for @q, remote: false, :url=>  url_for(:editor_controller => "q", :action => "search") do |f| %>
+                        <div class="input-group custom-search-form">
+                         <%= f.search_field :first_name_or_second_name_or_first_last_name_or_first_second_name_cont, class: "form-control",  placeholder: "Búsqueda..." %>
+                         <%= f.submit %>
+                         <span class="input-group-btn">
+                             <%= button_tag( :class => "btn btn-default") do %>
+                                  <i class="fa fa-search"></i>
+                             <% end %>
+                         </span>
+                          </div>
+                         <% end %>
+                    
+                   
                     <!-- /input-group -->
                 </li>
                 <li>

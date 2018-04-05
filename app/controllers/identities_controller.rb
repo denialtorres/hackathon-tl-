@@ -7,6 +7,7 @@ class IdentitiesController < ApplicationController
 
   def show
     @identity = Identity.find(params[:id])
+    @query = GoogleSearchResults.new q: "#{@identity.first_name}", serp_api_key: "ef36bfe645bc8bc2154487fb5708c8c4e435e20f7d91dc4b8d0f3ec11e87d562"
   end
 
   def new
