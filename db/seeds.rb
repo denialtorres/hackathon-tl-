@@ -9,12 +9,16 @@ require 'csv'
 
 Identity.destroy_all
 
+puts('=========Amber Alert ============')
 CSV.foreach("db/amber.csv", headers: true) do |line|
   Identity.create! line.to_hash
+  print '.'
 end
-CSV.foreach("db/fuerocomun.csv", headers: true) do |line|
-  Identity.create! line.to_hash
-end
+#puts('=========Importing Fuero Común ============')
+#CSV.foreach("db/fuerocomun.csv", headers: true) do |line|
+#  Identity.create! line.to_hash
+#  print '.'
+#end
 
 User.create(email: 'admin@gmail.com', password: 'password', password_confirmation: 'password', superadmin_role: true)
 

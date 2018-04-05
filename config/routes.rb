@@ -3,6 +3,11 @@ Rails.application.routes.draw do
 
   get 'dashboard/index'
 
+  resources :identities, only: [:index, :show] do
+    get :filter, on: :collection
+    get :list, on: :collection
+  end
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'home/index'
 
