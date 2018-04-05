@@ -14,7 +14,12 @@ body {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  padding: 1.25em;
+}
+.col-50 {
+  width: 50%;
+  float: left;
+  padding: 1rem;
+  text-align: left;
 }
 .missing {
   padding: 1.25em;

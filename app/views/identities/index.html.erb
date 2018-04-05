@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="panel-body">
+      <%= will_paginate @identities %>
+      <table class="table" style="width:600px">
+        <thead>
+        <tr>
+          <th style="text-align:right;">Nombre</th>
+          <th style="text-align:right;">Genero</th>
+          <th style="text-align:right;">Nacionalidad</th>
+          <th style="text-align:right;">Edad</th>
+          <th colspan="2"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @identities.each do |resource| %>
+            <tr>
+              <td style="text-align:right;"><%= resource.first_name %></td>
+              <td style="text-align:right;"><%= resource.gender %></td>
+              <td style="text-align:right;"><%= resource.birth_country %></td>
+              <td style="tex-align:right;"><%= rand(7..98) %></td>
+              <td><%= link_to 'Ver', identity_path(resource) %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+       <%= will_paginate @identities %>
+  </div>
+</div>
